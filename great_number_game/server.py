@@ -1,11 +1,12 @@
 from flask import Flask, render_template, request, redirect, session
 import random
+from env import key
 
 
 app = Flask(__name__)
 
 
-app.secret_key = 'super secret key'
+app.secret_key = key
 
 
 @app.route('/')
